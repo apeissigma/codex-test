@@ -24,9 +24,9 @@ def generate_fortune() -> str:
 
 
 def main() -> None:
-    print("🥠 Welcome to the Fortune Cookie Teller! 🥠")
+    print(" Welcome to the Fortune Cookie Teller! ")
     input("Press Enter to reveal your fortune...")
-    print(f"\n✨ Your fortune: {generate_fortune()}")
+    print(f"\n Your fortune: {generate_fortune()}")
 
 
 if __name__ == "__main__":
