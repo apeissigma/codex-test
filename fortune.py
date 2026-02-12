@@ -23,10 +23,22 @@ def generate_fortune() -> str:
     return random.choice(FORTUNES)
 
 
+def wants_another_fortune() -> bool:
+    """Return True if the user wants to reveal another fortune."""
+    answer = input("\nReveal another fortune? (y/n): ").strip().lower()
+    return answer in {"y", "yes"}
+
+
 def main() -> None:
-    print(" Welcome to the Fortune Cookie Teller! ")
-    input("Press Enter to reveal your fortune...")
-    print(f"\n Your fortune: {generate_fortune()}")
+    print("🥠 Welcome to the Fortune Cookie Teller! 🥠")
+
+    while True:
+        input("Press Enter to reveal your fortune...")
+        print(f"\n✨ Your fortune: {generate_fortune()}")
+
+        if not wants_another_fortune():
+            print("\n🌟 Thanks for visiting. Goodbye!")
+            break
 
 
 if __name__ == "__main__":
